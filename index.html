@@ -14,81 +14,14 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
+            background: #ecf0f1;
         }
 
-        /* LOGIN */
-        .login-container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .login-box {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-        }
-
-        .login-box h1 {
-            color: #667eea;
-            margin-bottom: 30px;
-            font-size: 28px;
-        }
-
-        .login-box input {
-            width: 100%;
-            padding: 12px;
-            margin: 15px 0;
-            border: 2px solid #eee;
-            border-radius: 5px;
-            font-size: 14px;
-            transition: border-color 0.3s;
-        }
-
-        .login-box input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .login-box button {
-            width: 100%;
-            padding: 12px;
-            margin-top: 20px;
-            background: #667eea;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .login-box button:hover {
-            background: #764ba2;
-        }
-
-        .login-error {
-            color: #e74c3c;
-            margin-top: 15px;
-            display: none;
-        }
-
-        /* MAIN APP */
         .app-container {
-            display: none;
-            width: 100%;
+            display: flex;
             flex-direction: column;
+            width: 100%;
+            min-height: 100vh;
         }
 
         .navbar {
@@ -156,10 +89,8 @@
             flex: 1;
             padding: 30px;
             overflow-y: auto;
-            background: #ecf0f1;
         }
 
-        /* SECTIONS */
         .section {
             display: none;
             background: white;
@@ -179,7 +110,6 @@
             padding-bottom: 10px;
         }
 
-        /* FORMS */
         .form-group {
             margin-bottom: 15px;
             display: flex;
@@ -205,14 +135,14 @@
             min-height: 80px;
         }
 
-        .btn-primary, .btn-secondary, .btn-success, .btn-danger {
+        .btn-primary, .btn-success, .btn-danger {
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 14px;
             font-weight: bold;
-            transition: all 0.3s;
+            margin-top: 10px;
         }
 
         .btn-primary {
@@ -220,37 +150,14 @@
             color: white;
         }
 
-        .btn-primary:hover {
-            background: #764ba2;
-        }
-
         .btn-success {
             background: #27ae60;
             color: white;
         }
 
-        .btn-success:hover {
-            background: #229954;
-        }
-
         .btn-danger {
             background: #e74c3c;
             color: white;
-        }
-
-        .btn-danger:hover {
-            background: #c0392b;
-        }
-
-        .btn-secondary {
-            background: #95a5a6;
-            color: white;
-        }
-
-        /* TABLES */
-        .table-responsive {
-            overflow-x: auto;
-            margin-top: 20px;
         }
 
         table {
@@ -264,7 +171,6 @@
             color: white;
             padding: 12px;
             text-align: left;
-            font-weight: bold;
         }
 
         td {
@@ -276,39 +182,6 @@
             background: #f8f9fa;
         }
 
-        /* CALENDAR */
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .month-card {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            border: 2px solid #ecf0f1;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .month-card:hover {
-            border-color: #667eea;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
-        }
-
-        .month-card h3 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-
-        .month-card p {
-            color: #7f8c8d;
-            font-size: 12px;
-        }
-
-        /* BADGES */
         .badge {
             display: inline-block;
             padding: 5px 10px;
@@ -327,17 +200,6 @@
             color: #e74c3c;
         }
 
-        .badge-open {
-            background: #d6eaf8;
-            color: #3498db;
-        }
-
-        .badge-closed {
-            background: #e8daef;
-            color: #8e44ad;
-        }
-
-        /* MESSAGES */
         .message {
             padding: 15px;
             border-radius: 5px;
@@ -362,57 +224,16 @@
             gap: 20px;
             margin-top: 20px;
         }
-
-        @media (max-width: 768px) {
-            .sidebar {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                height: auto;
-            }
-
-            .menu {
-                width: 100%;
-                display: flex;
-                overflow-x: auto;
-            }
-
-            .menu button {
-                white-space: nowrap;
-                flex-shrink: 0;
-            }
-
-            .content {
-                padding: 15px;
-            }
-
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
 </head>
 <body>
 
-<!-- LOGIN SECTION -->
-<div id="loginSection" class="login-container">
-    <div class="login-box">
-        <h1>🎯 WBR Portal</h1>
-        <p style="color: #7f8c8d; margin-bottom: 20px;">Gestión de Compromisos Comerciales</p>
-        <input type="password" id="passwordInput" placeholder="Ingresa tu contraseña">
-        <button onclick="login()">Ingresar</button>
-        <div class="login-error" id="loginError">Contraseña incorrecta</div>
-    </div>
-</div>
-
-<!-- APP SECTION -->
-<div id="appSection" class="app-container">
+<div class="app-container">
     <!-- NAVBAR -->
     <div class="navbar">
         <h1>📊 WBR - Sistema de Gestión Comercial</h1>
         <div class="user-info">
-            <span id="userDisplay">Usuario: -</span>
-            <button class="logout-btn" onclick="logout()">Salir</button>
+            <span id="userDisplay">Usuario: Coordinador (TEST)</span>
         </div>
     </div>
 
@@ -449,19 +270,17 @@
                 </div>
                 <button class="btn-primary" onclick="agregarVendedor()">Agregar Vendedor</button>
                 <div id="vendedorMsg"></div>
-                <div class="table-responsive">
-                    <table id="vendedoresTable">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Estado</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody id="vendedorTableBody"></tbody>
-                    </table>
-                </div>
+                <table id="vendedoresTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vendedorTableBody"></tbody>
+                </table>
             </div>
 
             <!-- COMPROMISOS -->
@@ -489,20 +308,18 @@
                 </div>
                 <button class="btn-success" onclick="agregarCompromiso()">Guardar Compromiso</button>
                 <div id="compromisoMsg"></div>
-                <div class="table-responsive">
-                    <table id="compromisosTable">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Vendedor</th>
-                                <th>Cliente</th>
-                                <th>Clasificación</th>
-                                <th>Fecha</th>
-                            </tr>
-                        </thead>
-                        <tbody id="compromisoTableBody"></tbody>
-                    </table>
-                </div>
+                <table id="compromisosTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Vendedor</th>
+                            <th>Cliente</th>
+                            <th>Clasificación</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="compromisoTableBody"></tbody>
+                </table>
             </div>
 
             <!-- WBR -->
@@ -531,52 +348,16 @@
                 </div>
                 
                 <div id="wbrMsg"></div>
-                <div class="table-responsive">
-                    <table id="wbrTable">
-                        <thead>
-                            <tr>
-                                <th>Semana</th>
-                                <th>Estado</th>
-                                <th>Fecha Apertura</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody id="wbrTableBody"></tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- AVANCES SEMANALES -->
-            <div id="avances" class="section">
-                <h2>✅ Registrar Avances Semanales</h2>
-                <div class="grid-2">
-                    <div class="form-group">
-                        <label>Mes:</label>
-                        <input type="month" id="avance_mes" value="2024-06" onchange="cargarCompromisosPorAvance()">
-                    </div>
-                    <div class="form-group">
-                        <label>Semana:</label>
-                        <input type="number" id="avance_semana" min="1" max="4" value="1" onchange="cargarCompromisosPorAvance()">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Vendedor:</label>
-                    <select id="avance_vendedor" onchange="cargarCompromisosPorAvance()"></select>
-                </div>
-                
-                <div id="avanceCompromisos"></div>
-                
-                <div class="form-group" style="margin-top: 20px;">
-                    <label>Descubrimientos:</label>
-                    <textarea id="avance_descubrimientos"></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Retos:</label>
-                    <textarea id="avance_retos"></textarea>
-                </div>
-                
-                <button class="btn-success" onclick="guardarAvances()">Guardar Avances</button>
-                <div id="avanceMsg"></div>
+                <table id="wbrTable">
+                    <thead>
+                        <tr>
+                            <th>Semana</th>
+                            <th>Estado</th>
+                            <th>Fecha Apertura</th>
+                        </tr>
+                    </thead>
+                    <tbody id="wbrTableBody"></tbody>
+                </table>
             </div>
 
             <!-- ACCIONES -->
@@ -599,7 +380,6 @@
                         <option value="Capacitación">Capacitación</option>
                         <option value="Acompañamiento">Acompañamiento</option>
                         <option value="Revisión de Precios">Revisión de Precios</option>
-                        <option value="Otro">Otro</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -608,7 +388,7 @@
                 </div>
                 <div class="form-group">
                     <label>Descripción:</label>
-                    <textarea id="accion_descripcion" placeholder="Describe la acción de soporte..."></textarea>
+                    <textarea id="accion_descripcion" placeholder="Describe la acción..."></textarea>
                 </div>
                 <div class="form-group">
                     <label>Responsable:</label>
@@ -621,86 +401,25 @@
                 <button class="btn-success" onclick="agregarAccion()">Crear Acción</button>
                 <div id="accionMsg"></div>
                 
-                <div style="margin-top: 30px;">
-                    <h3>Filtros:</h3>
-                    <div class="grid-2">
-                        <div class="form-group">
-                            <label>Mes:</label>
-                            <input type="month" id="filtro_mes" value="2024-06" onchange="cargarAcciones()">
-                        </div>
-                        <div class="form-group">
-                            <label>Estado:</label>
-                            <select id="filtro_estado" onchange="cargarAcciones()">
-                                <option value="">Todos</option>
-                                <option value="Pendiente">Pendiente</option>
-                                <option value="En proceso">En proceso</option>
-                                <option value="Completada">Completada</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="table-responsive">
-                    <table id="accionesTable">
-                        <thead>
-                            <tr>
-                                <th>Semana</th>
-                                <th>Tipo</th>
-                                <th>Vendedor</th>
-                                <th>Descripción</th>
-                                <th>Estado</th>
-                                <th>Vencimiento</th>
-                            </tr>
-                        </thead>
-                        <tbody id="accionesTableBody"></tbody>
-                    </table>
-                </div>
+                <table id="accionesTable" style="margin-top: 30px;">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Vendedor</th>
+                            <th>Descripción</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="accionesTableBody"></tbody>
+                </table>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    let usuarioActual = null;
-    let rolActual = null;
-
-    // ===============================
-    // LOGIN
-    // ===============================
-    function login() {
-        const password = document.getElementById('passwordInput').value;
-        
-        if (typeof google === 'undefined' || !google.script) {
-            document.getElementById('loginError').textContent = '⚠️ Error: No está desplegado correctamente.';
-            document.getElementById('loginError').style.display = 'block';
-            return;
-        }
-        
-        google.script.run.withSuccessHandler(response => {
-            if (response.exito) {
-                usuarioActual = response.usuario;
-                rolActual = response.rol;
-                document.getElementById('loginSection').style.display = 'none';
-                document.getElementById('appSection').style.display = 'flex';
-                document.getElementById('userDisplay').textContent = `${response.usuario} (${response.rol})`;
-                cargarDatos();
-            } else {
-                document.getElementById('loginError').style.display = 'block';
-            }
-        }).withFailureHandler(error => {
-            document.getElementById('loginError').textContent = '❌ Error: ' + error;
-            document.getElementById('loginError').style.display = 'block';
-        }).verificarLogin(password);
-    }
-
-    function logout() {
-        usuarioActual = null;
-        rolActual = null;
-        document.getElementById('loginSection').style.display = 'flex';
-        document.getElementById('appSection').style.display = 'none';
-        document.getElementById('passwordInput').value = '';
-        document.getElementById('loginError').style.display = 'none';
-    }
+    let usuarioActual = 'Coordinador';
+    let rolActual = 'Coordinador';
 
     // ===============================
     // NAVEGACIÓN
@@ -734,7 +453,7 @@
                 tbody.innerHTML += row;
             });
             
-            const selects = ['compromiso_vendedor', 'avance_vendedor', 'accion_vendedor'];
+            const selects = ['compromiso_vendedor', 'accion_vendedor'];
             selects.forEach(id => {
                 const select = document.getElementById(id);
                 select.innerHTML = '';
@@ -756,7 +475,7 @@
         }
         google.script.run.withSuccessHandler(response => {
             if (response.exito) {
-                mostrarMensaje('vendedorMsg', '✅ Vendedor agregado correctamente', 'success');
+                mostrarMensaje('vendedorMsg', '✅ Vendedor agregado', 'success');
                 document.getElementById('nuevoVendedor').value = '';
                 cargarVendedores();
             }
@@ -836,7 +555,7 @@
                     <p style="font-size: 28px; color: #27ae60; font-weight: bold;">${resumen['Prospección']}</p>
                 </div>
                 <div style="background: #d6eaf8; padding: 20px; border-radius: 8px;">
-                    <h3>📈 Crecimiento BCG</h3>
+                    <h3>📈 Crecimiento</h3>
                     <p style="font-size: 28px; color: #3498db; font-weight: bold;">${resumen['Crecimiento']}</p>
                 </div>
                 <div style="background: #e8daef; padding: 20px; border-radius: 8px;">
@@ -860,9 +579,8 @@
             wbrs.forEach(w => {
                 const row = `<tr>
                     <td>${w.semana}</td>
-                    <td><span class="badge ${w.estado === 'Abierta' ? 'badge-open' : 'badge-closed'}">${w.estado}</span></td>
+                    <td><span class="badge">${w.estado}</span></td>
                     <td>${new Date(w.fecha_apertura).toLocaleDateString()}</td>
-                    <td>${w.estado === 'Abierta' ? '<span style="color: #3498db;">Abierta</span>' : '<span style="color: #8e44ad;">Cerrada</span>'}</td>
                 </tr>`;
                 tbody.innerHTML += row;
             });
@@ -889,52 +607,10 @@
 
         google.script.run.withSuccessHandler(response => {
             if (response.exito) {
-                mostrarMensaje('wbrMsg', '✅ WBR cerrada y guardada', 'success');
+                mostrarMensaje('wbrMsg', '✅ WBR cerrada', 'success');
                 cargarWBRdelMes();
             }
         }).cerrarWBR(mes, semana, descubrimientos, retos);
-    }
-
-    // ===============================
-    // AVANCES
-    // ===============================
-    function cargarCompromisosPorAvance() {
-        const mes = document.getElementById('avance_mes').value;
-        const semana = document.getElementById('avance_semana').value;
-        const vendedor = document.getElementById('avance_vendedor').value;
-
-        google.script.run.withSuccessHandler(compromisos => {
-            let html = '<div style="margin-top: 20px;"><h3>Compromisos de ' + vendedor + ':</h3>';
-            compromisos.forEach(c => {
-                html += `<div style="background: #f8f9fa; padding: 15px; margin: 10px 0; border-radius: 5px;">
-                    <label style="display: flex; align-items: center; gap: 10px;">
-                        <input type="checkbox" class="compromiso-check" data-id="${c.id}">
-                        <span><strong>${c.cliente}</strong> - ${c.clasificacion}</span>
-                    </label>
-                </div>`;
-            });
-            html += '</div>';
-            document.getElementById('avanceCompromisos').innerHTML = html;
-        }).obtenerCompromisos(mes);
-    }
-
-    function guardarAvances() {
-        const mes = document.getElementById('avance_mes').value;
-        const semana = document.getElementById('avance_semana').value;
-        const vendedor = document.getElementById('avance_vendedor').value;
-        const descubrimientos = document.getElementById('avance_descubrimientos').value;
-        const retos = document.getElementById('avance_retos').value;
-
-        const checks = document.querySelectorAll('.compromiso-check');
-        let guardados = 0;
-
-        checks.forEach(check => {
-            const id = check.getAttribute('data-id');
-            google.script.run.guardarAvance(mes, semana, vendedor, id, check.checked, false, descubrimientos, retos, usuarioActual);
-            guardados++;
-        });
-
-        mostrarMensaje('avanceMsg', `✅ ${guardados} compromisos registrados`, 'success');
     }
 
     // ===============================
@@ -965,18 +641,16 @@
     }
 
     function cargarAcciones() {
-        const mes = document.getElementById('filtro_mes').value;
+        const mes = document.getElementById('accion_mes').value;
         google.script.run.withSuccessHandler(acciones => {
             const tbody = document.getElementById('accionesTableBody');
             tbody.innerHTML = '';
             acciones.forEach(a => {
                 const row = `<tr>
-                    <td>${a.semana}</td>
                     <td>${a.tipo}</td>
                     <td>${a.vendedor}</td>
                     <td>${a.descripcion}</td>
                     <td>${a.estado}</td>
-                    <td>${new Date(a.fecha_vencimiento).toLocaleDateString()}</td>
                 </tr>`;
                 tbody.innerHTML += row;
             });
@@ -996,12 +670,9 @@
         setTimeout(() => messageDiv.remove(), 4000);
     }
 
-    // Permitir Enter en password
-    document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('passwordInput').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') login();
-        });
-        document.getElementById('compromiso_mes').addEventListener('change', cargarCompromisos);
+    // Cargar datos al iniciar
+    window.addEventListener('DOMContentLoaded', () => {
+        cargarDatos();
     });
 </script>
 
